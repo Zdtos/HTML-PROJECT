@@ -2,11 +2,125 @@
 <html>
 <head>
     <title>Mount Caramel Book Club</title>
+    <link rel='stylesheet' href='style.css' type="text/css">
+
+<!-- font sytle -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+<style>
+    body {
+        /*first-lesson*/
+        background-color: #eeeeee;
+    }
+    header {
+        /*first-lesson*/
+        background-color: brown;
+    }
+    nav {
+        /*first-lesson*/
+        background-color: aquamarine;
+    }
+    #intro {
+        /*first-lesson*/
+        background-color: pink;
+        /*second-lesson*/
+        font-family: Arial, Helvetica, sans-serif
+    }
+.main-section-control h2 {
+    /*first-lesson*/
+    background-color: darkkhaki;
+    /*second-lesson*/
+    font-family:Arial, Helvetica, sans-serif
+}
+#bestsellers, footer {
+    /*first-lesson*/
+    background-color:lightyellow;
+}
+header, nav, #intro, #main-section, #bestsellers,footer {
+    /*first-lesson*/
+    border: 1px solid black;
+}
+header, nav, #intro, #main-section {
+    /*first-lesson*/
+    border-radius: 10px;
+}
+header h1 {
+    /*first-lesson*/
+    color: white;
+    /*second-lesson*/
+    font-size: 50px
+    font-family:Arial,Helvetica, sans-serif;
+}
+h2,p {
+    /*first-lesson*/
+    color:#333333;
+}
+table,th,td {
+    /*first-lesson*/
+    border: 1px solid black;
+}
+tr:last-child {
+    /*first-lesson*/
+    color:red;
+}
+span {
+    /*first-lesson*/
+    color:blue;
+}
+footer p first-child span{
+    /*first-lesson*/
+    color:red;
+}
+.teacher-info {
+    /*first-lesson*/
+    border: 1px solid;
+    border-radius: 5px;
+}
+button {
+    /*first-lesson*/
+    background-color: red;
+    color:white;
+    /*second-lesson*/
+    font-size: 20px;
+    font-weight: bold;
+}
+/*second-lesson*/
+ul {
+    list-style-type: none;
+}
+li a {
+    text-decoration: none;
+    color: #333333;
+    font-size:20px;
+    font-weight:60px;
+}
+li a:hover {
+    color: red;
+}
+p {
+    font-size:18px;
+}
+h3 {
+    font-size:20px;
+    font-family: Arial,Helvetica , sans-serif;
+    font-decoration:underline; 
+}
+</style>
 </head>
 <body>
+
+    <div class="grid-container">
     <!--Heading-->
+    <header>
     <h1>Mount Caramel Book Club </h1>
+    <img src="Rhttp.jpg" alt="Library Image" width="100%" height="400px">
+    </header>
     <!--navigation bar-->
+    <nav>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="https://indriesshahfoundation.org/books-childrens-books/" target= "_blank">Online
@@ -14,20 +128,46 @@ Resources</a></li>
         <li><a href="#">Reading Groups </a></li>
         <li><a href="#">Contact Us </a></li>
     </ul>
+    </nav>
     <!--Intro-->
+    <div id="intro">
     <h2>Welcome To Mount Caramel Book Club </h2>
     <p>The Mount Caramel Book Club is an online community of book readers in Mount Caramel School,</p>
+    </div>
+    <!--Main Section-->
+    <div id="main-section">
     <!--content-->
+    <div class="main-section-content">
     <h2>Meet Our Teachers </h2>
+    <div id="teachers">
+        <div class="teacher-info">
+            <div>
+                <img src="images (1).jpg" alt="Library Image" width="100%" height="300px">
+            </div>
+            <div>
     <h3>Ms Emma </h3>
     <p>She teaches elementary school kids. She has a <i>Bachelors Degree in elementary education </i></p>
-    <h3>Ms Caroline </h3>
-    <p>she teached secondary school and high school. She has a <i> Master Of Arts </i></p>
+            </div>
+            </div>
+            <div class="teacher-info">
+                <div>
+                 <img src="images.jpg" alt="Library Image" width="100%" height="300%">
+            </div>
+            <div>
+                <h3>Ms Caroline </h3>
+                <p>she teached secondary school and high school. She has a <i> Master Of Arts </i></p>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
     <!--content 2-->
+    <div id="book reviews" class="main-section-content">
     <h2>Book review</h2>
     <h3>Alice in the wonderland </h3>
     <p><strong>Amit: </strong><q> I loved reading This Book. A must read for everyone. </q></p>
     <p><strong>Sehkar: </strong><q> I really enjoyed reading this book. </q></p>
+    </div>
     <!--Content-3 (table)-->
     <h2>Opening Timing</h2>
     <table>
@@ -61,7 +201,14 @@ Resources</a></li>
             </tr>
         </tr>
     </table>
-    <!--Bestseller Section-->
+    <div id="video" class="main-section-content">
+    <h1>Related Videos
+    <div>
+        </h1><iframe width="560" height="315" src="https://www.youtube.com/embed/_4r5JTzA6Lo?si=NKyp6OgZMMq2sCTf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/T3-zHBmfQSg?si=QjnRnUu6-955Touk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+</div>
+    <!--Bestseller books-->
     <h2>Bestseller Sellers</h2>
     <ol>
     <li>
