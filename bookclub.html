@@ -23,19 +23,34 @@
     nav {
         /*first-lesson*/
         background-color: aquamarine;
+        /*forth-lesson*/
+        position:sticky;
+        top:0;
+        z-index:2;
+        /*fifth-lesson*/
+        display:flex;
+        justify-content:centre;
     }
     #intro {
         /*first-lesson*/
         background-color: pink;
         /*second-lesson*/
-        font-family: Arial, Helvetica, sans-serif
+        font-family: Arial, Helvetica, sans-serif;
+        /*third-lesson*/
+        text-align: center;
     }
 .main-section-control h2 {
     /*first-lesson*/
     background-color: darkkhaki;
     /*second-lesson*/
-    font-family:Arial, Helvetica, sans-serif
+    font-family:Arial, Helvetica, sans-serif;
+    /*third-lesson*/
+    padding: 5px;
+        font-size: 24px;
+        text-align:center;
+        margin-bottom:50px;
 }
+
 #bestsellers, footer {
     /*first-lesson*/
     background-color:lightyellow;
@@ -52,8 +67,16 @@ header h1 {
     /*first-lesson*/
     color: white;
     /*second-lesson*/
-    font-size: 50px
+    font-size: 50px;
     font-family:Arial,Helvetica, sans-serif;
+}
+h1 {
+    /*first-lesson*/
+    color: white;
+    font-size: 50px;
+    font-family:Arial,Helvetica, sans-serif;
+    /*third-lesson*/
+    margin : 30px;
 }
 h2,p {
     /*first-lesson*/
@@ -79,15 +102,32 @@ footer p first-child span{
     /*first-lesson*/
     border: 1px solid;
     border-radius: 5px;
+    /*third-lesson*/
+    margin:10px;
+    width:400px;
+    box-shadow: 6px 0px 21px -3px #333333;
+    /*fifth-lesson*/
+    display:flex;
+    align-items:centre;
+    justify-content: centre;
 }
 button {
     /*first-lesson*/
     background-color: red;
     color:white;
+    /*third-lesson*/
+    padding:5px;
+    border: radius 5px;
+    border:none;
     /*second-lesson*/
     font-size: 20px;
     font-weight: bold;
+    /*forth-lesson*/
+    position:fixed;
+    right:50px;
+    bottom:40px;
 }
+
 /*second-lesson*/
 ul {
     list-style-type: none;
@@ -107,7 +147,87 @@ p {
 h3 {
     font-size:20px;
     font-family: Arial,Helvetica , sans-serif;
-    font-decoration:underline; 
+    text-decoration:underline; 
+}
+/*third-lesson*/
+nav li {
+    margin:10px;
+    padding:5px;
+    border:1px solid;
+    border-radius: 5px;
+}
+.teachers-info div:last-child {
+    margin-left: 50px;
+}
+.main-section-content {
+    padding:20px;
+}
+table {
+    margin: auto;
+}
+th,td {
+    padding:10px;
+}
+footer {
+    padding:20px;
+    /*fifth-lesson*/
+    display:flex;
+    justify-content:space-around;
+    align-items:centre;
+}
+#bestsellers h2 {
+    padding:20px;
+}
+ol li {
+    margin-bottom:20px;
+}
+/*forth-lesson*/
+#book-reviews p,
+#book-reviews h3 {
+    position:relative;
+    left:40%;
+    width : 400px;
+}
+/*fifth-lesson*/
+#videos div {
+display:flex;
+justify-content:space-around;
+}
+#teachers {
+display:flex;
+justify-content:space-around;
+align-items:centre;
+}
+nav ul {
+display:flex;
+justify-content:space-around;
+}
+header {
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+}
+#intro {
+    grid-area: intro;
+}
+#main-section {
+    grid-area: main-section;
+}
+#bestsellers {
+    grid-area: bestsellers;
+}
+footer {
+    grid-area: footer;
+}
+.grid-container {
+    display:grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-areas: 
+    "header header header header intro"
+    "nav nav nav nav intro"
+    "main-section main-section main-section main-section bestsellers"
+    "footer footer footer footer footer"
 }
 </style>
 </head>
@@ -151,7 +271,7 @@ Resources</a></li>
             </div>
             <div class="teacher-info">
                 <div>
-                 <img src="images.jpg" alt="Library Image" width="100%" height="300%">
+                 <img src="images.jpg" alt="Library Image" width="100%" height="300px">
             </div>
             <div>
                 <h3>Ms Caroline </h3>
@@ -209,6 +329,7 @@ Resources</a></li>
     </div>
 </div>
     <!--Bestseller books-->
+    <div id="bestsellers">
     <h2>Bestseller Sellers</h2>
     <ol>
     <li>
@@ -220,6 +341,7 @@ Resources</a></li>
     <li>
     <b>Where The Wild Things Are</b> by <em>Maurice Sendak</em><br></li>
     </ol>
+    </div>
     <!--contact info-->
     <p>contact us : Mrs Caroline</p>
     <p>phone number: +1124533</p>
