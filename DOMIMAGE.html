@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript DOM example</title>
+</head>
+<body>
+    <header>
+    <h1 id="heading">Hello,Mihit this side</h1>
+ </header>
+<p>Trying to add dymanic image today using JS DOM</p>
+ <script>
+    let img = document.createElement("img");
+    img.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK8Ys2LGbgWCuLl_YIpKy-Gi29EjJPTkV98A&s";
+    img.alt="Java Script";
+    img.id="JavaImage";
+    img.className="image-style";
+    img.width="200"
+    img.height="200"
+    document.body.append(img);
+</script>
+</body>
+</html>
