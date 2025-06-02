@@ -28,6 +28,11 @@
     <button onclick="changetoCircle()">Make Circle</button>
     <button onclick="hide()">Hide</button>
     <button onclick="show()">Show</button>
+    <button onclick="changeBackground()">Change Background</button>
+    <button onclick="increaseSize()">Increase Size</button>
+    <button onclick="decreaseSize()">Decrease Size</button>
+    <button onclick="toggleBorder()">Toggle Border</button>
+    <button onclick="reset()">Reset</button>
     </div>
     <script>
         let div=document.querySelector('.rectangle');
@@ -41,6 +46,41 @@
         function show ( ) {
             div.style.display="block";
         }
+        function changeBackground ( ) {
+            const colors=["red","blue","green","purple","orange"];
+            const randomColor = colors[Math.floor(Math.random() * color.length)];
+            div.style.background = randomColor;
+        }
+    let currentSize = 200;
+       let borderVisible= true;
+       function increaseSize ( ) {
+        currentSize +=20;
+        div.style.width=currentSize+ "px";
+        div.style.height=currentSize+ "px";
+       }
+       function decreaseSize ( ) {
+        currentSize=Math.max (100, currrentSize - 20);
+        div.style.width=currentSize+ "px";
+        div.style.height=currentSize+ "px";
+       }
+       function toggleBorder ( ) {
+        if (borderVisible) {
+            div.style.border="none";
+        } else {
+            div.style.border="2px solid black";
+        }
+        borderVisible = !borderVisible;
+       }
+       function reset ( ) {
+        currentSize=200;
+         borderVisible="true";
+         div.style.display="block";
+         div.style.width="200px";
+         div.style.height="200px";
+         div.style.border="2px solid black";
+         div.style.borderRadius="0";
+         div.style.background="none";
+       }
 
         div.onmouseenter = function ( ) {
             div.style.background ="red";
