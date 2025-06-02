@@ -48,7 +48,7 @@
         }
         function changeBackground ( ) {
             const colors=["red","blue","green","purple","orange"];
-            const randomColor = colors[Math.floor(Math.random() * color.length)];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
             div.style.background = randomColor;
         }
     let currentSize = 200;
@@ -59,7 +59,7 @@
         div.style.height=currentSize+ "px";
        }
        function decreaseSize ( ) {
-        currentSize=Math.max (100, currrentSize - 20);
+        currentSize=Math.max (100, currentSize - 20);
         div.style.width=currentSize+ "px";
         div.style.height=currentSize+ "px";
        }
