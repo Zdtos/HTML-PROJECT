@@ -1,29 +1,35 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
+<head>
+    <title>Image Slideshow</title>
+    <style>
+        .mySlides {
+            display: none;
+            height: 500px;
+            width: 600px;
+            object-fit: cover;
+        }
+    </style>
+</head>
 <body>
-<!--Slide Show-->
+<!-- Slideshow Section -->
 <section>
-    <img class="mySlides" src="code-stable.png" style="height:500px;">
-    <img class="mySlides" src="javascript-online-logo-for-website-0.png" style="height:500px;">
+    <img class="mySlides" src="code-stable.png" alt="Image 1">
+    <img class="mySlides" src="javascript-online-logo-for-website-0.png" alt="Image 2">
 </section>
 <script>
-// Automatic Slideshow - change image every 3 seconds
-var myIndex= 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x=getElementByClassName ("mySlides");
-    for (i=0; i < x.length; i++) {
-        x[i].style.display="none";
+    let myIndex = 0;
+    function carousel() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > slides.length) { myIndex = 1; }
+        slides[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 3000);
     }
-    myIndex ++
-    if (myIndex > x.length) {myIndex=1}
-    x [myIndex - 1].style.display= "block";
-    setTimeout (carousel,3000);
-}
+    carousel();
 </script>
 </body>
 </html>
-
-
