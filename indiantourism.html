@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tourism In Pakistan</title>
+  <style>
+    {
+      box-sizing:broder-box;
+      margin:0;
+      padding:0;
+    }
+    body {
+      font-family:"Segoe UI", Tahoma , Geneva , Verdana, sans-serrif;
+    }
+    nav {
+      background-color:#006400;
+      padding:10px 20px;
+      display:flex;
+      align-items:center;
+      justify-content : space-between;
+      flex-wrap:wrap;
+    }
+    .nav-left {
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+    .nav-left img {
+      height:50px;
+      border-radius:8px  
+    }
+    .nav-left h1 {
+      color:white;
+      font-size:24px;
+    }
+    ul {
+      list-style:none;
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    nav a {
+      text-decoration:none;
+      color:white;
+      font-weight:bold;
+      padding:10 15px;
+      border-radius:6px;
+      transition background-color:0.3s;   
+    }
+    nav a:hover {
+      background-color:#228B22 /*forest green*/
+    }
+    @media (max-width: 768px) {
+      nav {
+        flex-direction:column;
+        align-items: flex-start;
+      }
+      ul {
+        padding-top:10px;
+        flex-direction:column;
+        width:100%;
+      }
+    }
+  </style>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+      <img src="https://as2.ftcdn.net/v2/jpg/01/86/98/23/1000_F_186982382_7Sx1k2pUBM8ypOxYMm4fowl2dEqDN7DK.jpg"
+           alt="Tourism Logo">
+        <h1>Indian Tourism</h1>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html"> Destination</a></li>
+        <li><a href="culture.html">Culture</a></li>
+        <li><a href="food.html">Food</a></li>
+        <li><a href="adventures.html">Adventures</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- Slideshow Section -->
+<section>
+    <img class="mySlides" src="https://wallpaperaccess.com/full/1386038.jpg" alt="Image 1">
+    <img class="mySlides" src="https://www.tripsavvy.com/thmb/j612aq-Vz0HVu-KvH_OtNwrmE8A=/2122x1413/filters:fill(auto,1)/GettyImages-531732818-592d24ec3df78cbe7e956e68.jpg" alt="Image 2">
+    <img class="mySlides" src="https://tourwithrahul.com/wp-content/uploads/2020/07/humayun-s-tomb-under-blue-sky-3672388-scaled.jpg" alt="Image 3">
+</section>
+<script>
+    let myIndex = 0;
+    function carousel() {
+        let slides = document.getElementsByClassName("mySlides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > slides.length) { myIndex = 1; }
+        slides[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 3000);
+    }
+    carousel();
+</script>
+  </body>
+</html>
